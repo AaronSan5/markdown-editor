@@ -1,0 +1,203 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* Barra de herramientas */
+        .toolbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .toolbar button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .toolbar button:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .toolbar button:active {
+            transform: translateY(0);
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: flex;
+            height: 100vh;
+            padding-top: 80px;
+            gap: 2px;
+        }
+
+        /* Editor */
+        .editor-section {
+            flex: 1;
+            background: white;
+            border-radius: 8px 0 0 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .editor-header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 8px 0 0 0;
+        }
+
+        .editor {
+            flex: 1;
+            border: none;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            resize: none;
+            outline: none;
+            background: #fafbfc;
+        }
+
+        /* Preview */
+        .preview-section {
+            flex: 1;
+            background: white;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-header {
+            background: #27ae60;
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 0 8px 0 0;
+        }
+
+        .preview {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: white;
+            border-radius: 0 0 8px 0;
+        }
+
+        /* Estilos para el contenido del preview */
+        .preview h1, .preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+            margin: 20px 0 10px 0;
+            color: #2c3e50;
+        }
+
+        .preview h1 { font-size: 2em; }
+        .preview h2 { font-size: 1.7em; }
+        .preview h3 { font-size: 1.4em; }
+        .preview h4 { font-size: 1.2em; }
+        .preview h5 { font-size: 1.1em; }
+        .preview h6 { font-size: 1em; }
+
+        .preview ul, .preview ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .preview li {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .preview p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Estilos para encabezados contrastados */
+        .contrasted-header {
+            background: linear-gradient(45deg, #ff6b6b, #feca57) !important;
+            color: white !important;
+            padding: 10px 15px !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+            transform: scale(1.05) !important;
+            transition: all 0.3s ease !important;
+            margin: 25px 0 15px 0 !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .toolbar {
+                bottom: 0;
+                top: auto;
+                padding: 10px 15px;
+            }
+
+            .container {
+                flex-direction: column;
+                padding-top: 20px;
+                padding-bottom: 80px;
+                gap: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .editor-section,
+            .preview-section {
+                flex: none;
+                height: 45vh;
+                border-radius: 8px;
+            }
+
+            .editor-header,
+            .preview-header {
+                border-radius: 8px 8px 0 0;
+            }
+
+            .preview {
+                border-radius: 0 0 8px 8px;
+            }
+
+            .toolbar button {
+                padding: 10px 18px;
+                font-size: 13px;
+            }
+        }
+
+        /* Animaciones */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+   

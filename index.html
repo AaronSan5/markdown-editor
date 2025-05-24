@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Markdown - Preview</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de herramientas -->
+    <div class="toolbar">
+        <button id="generateBtn">Generar Vista Previa</button>
+        <button id="contrastBtn">Contrastar Encabezados</button>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Editor -->
+        <div class="editor-section">
+            <div class="editor-header">📝 Editor Markdown</div>
+            <textarea class="editor" id="editor" placeholder="Escribe tu Markdown aquí...
+
+Ejemplo:
+# Título Principal
+## Subtítulo
+### Título Nivel 3
+
+- Lista item 1
+- Lista item 2
+- Lista item 3
+
+1. Lista numerada 1
+2. Lista numerada 2
+3. Lista numerada 3
+
+#### Más títulos
+##### Título nivel 5
+###### Título nivel 6"></textarea>
+        </div>
+
+        <!-- Preview -->
+        <div class="preview-section">
+            <div class="preview-header">👁️ Vista Previa</div>
+            <div class="preview" id="preview">
+                <p>Haz clic en <strong>"Generar Vista Previa"</strong> para ver el resultado HTML...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
