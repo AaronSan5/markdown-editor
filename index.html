@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor Markdown - Preview</title>
-   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Barra de herramientas -->
-    <div class="toolbar">
+    <!-- Header -->
+    <header class="toolbar">
         <button id="generateBtn">Generar Vista Previa</button>
         <button id="contrastBtn">Contrastar Encabezados</button>
-    </div>
+        <button id="formatBtn">Aplicar Formato</button>
+    </header>
 
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Editor -->
-        <div class="editor-section">
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Editor Section -->
+        <section class="editor-section">
             <div class="editor-header">📝 Editor Markdown</div>
             <textarea class="editor" id="editor" placeholder="Escribe tu Markdown aquí...
 
@@ -33,20 +34,40 @@ Ejemplo:
 2. Lista numerada 2
 3. Lista numerada 3
 
+**Texto en negrita**
+*Texto en cursiva*
+
+```
+// Bloque de código
+console.log('Hola mundo');
+function saludar() {
+    return 'Hola desde JavaScript!';
+}
+```
+
 #### Más títulos
 ##### Título nivel 5
 ###### Título nivel 6"></textarea>
-        </div>
+        </section>
 
-        <!-- Preview -->
-        <div class="preview-section">
+        <!-- Preview Section -->
+        <section class="preview-section">
             <div class="preview-header">👁️ Vista Previa</div>
             <div class="preview" id="preview">
                 <p>Haz clic en <strong>"Generar Vista Previa"</strong> para ver el resultado HTML...</p>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Editor Markdown - Proyecto de Desarrollo Web</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/format.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/blocks.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
